@@ -1,0 +1,5 @@
+build/*
+release/*
+!*.gitkeep
+.DS_Store
+testResults.xml
