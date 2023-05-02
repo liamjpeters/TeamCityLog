@@ -46,7 +46,7 @@ Consider the below:
 
 ```powershell
 $MyObject = [PSCustomObject]@{
-	Name           = 'Mr Spock'
+    Name           = 'Mr Spock'
     Species        = 'Vulcan'
     Age            = 161
     FavouriteEmoji = "🖖"
@@ -119,6 +119,8 @@ This module exposes 2 ways to use message blocks.
 
 2. Calling `New-TeamCityBuildMessageBlock` and passing a script block.
 
+    > The script block passed in to `New-TeamCityBuildMessageBlock` is executed in the current scope. No new scope is created. *e.g. Variables declared/set within the script block are accessible outside of it also.*
+
     ```powershell
     New-TeamCityBuildMessageBlock 'New Message Block' {
         Write-TeamcityBuildMessage "Inside the block 😀"
@@ -127,8 +129,6 @@ This module exposes 2 ways to use message blocks.
         Start-Sleep -Seconds 5
     }
     ```
-
-    > The script block passed in to `New-TeamCityBuildMessageBlock` is executed in the current scope. Not new scope is created. *e.g. Variables declared/set within the script block are accessible outside of it also.*
 
 ![Custom build message blocks](images/custom_message_block_unfolded.png)
 
