@@ -120,13 +120,15 @@ This module exposes 2 ways to use message blocks.
 2. Calling `New-TeamCityBuildMessageBlock` and passing a script block.
 
     ```powershell
-    Open-TeamCityBuildMessageBlock 'New Message Block' {
+    New-TeamCityBuildMessageBlock 'New Message Block' {
         Write-TeamcityBuildMessage "Inside the block 😀"
         $Procs = Get-Process pwsh | Select -first 2
         Write-TeamCityBuildMessage "$($Procs | Format-Table | Out-String)"
         Start-Sleep -Seconds 5
     }
     ```
+
+    > The script block passed in to `New-TeamCityBuildMessageBlock` is executed in the current scope. Not new scope is created. *e.g. Variables declared/set within the script block are accessible outside of it also.*
 
 ![Custom build message blocks](images/custom_message_block_unfolded.png)
 
