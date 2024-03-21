@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added cmdlets to manipulate build tags
+
+  `Add-TeamCityBuildTag` - Adds a new tag to the current build
+
+  `Remove-TeamCityBuildTag` - Removes a tag from the current build
+
 ## [0.1.0] - 2023-04-23
 
 ### Added
