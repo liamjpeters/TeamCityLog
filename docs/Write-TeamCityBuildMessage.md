@@ -14,22 +14,25 @@ Reports a message for a TeamCity build log
 
 ### Normal (Default)
 ```
-Write-TeamCityBuildMessage [-Text] <String> [<CommonParameters>]
+Write-TeamCityBuildMessage [-Text] <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### Error
 ```
-Write-TeamCityBuildMessage [-Text] <String> [-IsError] -ErrorDetails <String> [<CommonParameters>]
+Write-TeamCityBuildMessage [-Text] <String> [-IsError] -ErrorDetails <String>
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### Failure
 ```
-Write-TeamCityBuildMessage [-Text] <String> [-IsFailure] [<CommonParameters>]
+Write-TeamCityBuildMessage [-Text] <String> [-IsFailure] [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ### Warning
 ```
-Write-TeamCityBuildMessage [-Text] <String> [-IsWarning] [<CommonParameters>]
+Write-TeamCityBuildMessage [-Text] <String> [-IsWarning] [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -115,6 +118,21 @@ Parameter Sets: Error
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

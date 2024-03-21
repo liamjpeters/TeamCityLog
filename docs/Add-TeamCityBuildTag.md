@@ -5,40 +5,33 @@ online version: https://www.jetbrains.com/help/teamcity/2023.05/service-messages
 schema: 2.0.0
 ---
 
-# New-TeamCityBuildMessageBlock
+# Add-TeamCityBuildTag
 
 ## SYNOPSIS
-Blocks are used to group several messages in the build log.
+Adds a new tag to the current build
 
 ## SYNTAX
 
 ```
-New-TeamCityBuildMessageBlock [-Name] <String> [-ScriptBlock] <ScriptBlock>
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Add-TeamCityBuildTag [-Tag] <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This function wraps the scriptblock in the names message block.
-Doesn't 
-create a new scope.
+Adds a new tag to the current build using TeamCity service messages.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-New-TeamCityBuildMessageBlock 'Querying ServiceNow' {
-    ...
-}
+Add-TeamCityBuildTag "My Custom Tag"
 ```
 
-##teamcity\[blockOpened name='Querying ServiceNow'\]
-...
-##teamcity\[blockClosed name='Querying ServiceNow'\]
+##teamcity\[addBuildTag 'My Custom Tag'\]
 
 ## PARAMETERS
 
-### -Name
-The name of the block
+### -Tag
+The tag to add
 
 ```yaml
 Type: String
@@ -47,21 +40,6 @@ Aliases:
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ScriptBlock
-The content of the script block (executed in the current scope)
-
-```yaml
-Type: ScriptBlock
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -91,6 +69,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Void
 ## NOTES
-https://www.jetbrains.com/help/teamcity/service-messages.html#Blocks+of+Service+Messages
+Added in 2023.05
 
 ## RELATED LINKS
+
+[https://www.jetbrains.com/help/teamcity/2023.05/service-messages.html#Adding+and+Removing+Build+Tags](https://www.jetbrains.com/help/teamcity/2023.05/service-messages.html#Adding+and+Removing+Build+Tags)
+

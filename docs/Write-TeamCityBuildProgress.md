@@ -14,17 +14,17 @@ Set the progress of the current build.
 
 ### message (Default)
 ```
-Write-TeamCityBuildProgress [-Message] <String> [<CommonParameters>]
+Write-TeamCityBuildProgress [-Message] <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### start
 ```
-Write-TeamCityBuildProgress -Start <String> [<CommonParameters>]
+Write-TeamCityBuildProgress -Start <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### finish
 ```
-Write-TeamCityBuildProgress -Finish <String> [<CommonParameters>]
+Write-TeamCityBuildProgress -Finish <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,6 +102,21 @@ Parameter Sets: finish
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

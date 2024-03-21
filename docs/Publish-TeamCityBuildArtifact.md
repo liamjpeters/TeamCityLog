@@ -1,7 +1,7 @@
 ---
 external help file: TeamCityLog-help.xml
 Module Name: TeamCityLog
-online version:
+online version: https://www.jetbrains.com/help/teamcity/2023.05/service-messages.html#Adding+and+Removing+Build+Tags
 schema: 2.0.0
 ---
 
@@ -13,7 +13,7 @@ Publishes a build artifact.
 ## SYNTAX
 
 ```
-Publish-TeamCityBuildArtifact [-Path] <String> [<CommonParameters>]
+Publish-TeamCityBuildArtifact [-Path] <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,6 +49,21 @@ Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

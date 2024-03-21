@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2024-03-21
+
 ### Added
 
 - Added cmdlets to manipulate build tags
@@ -17,5 +19,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2023-04-23
 
 ### Added
-- Initial release[Unreleased]: https://github.com/liamjpeters/TeamCityLog/compare/0.1.0..HEAD
+- Initial release[Unreleased]: https://github.com/liamjpeters/TeamCityLog/compare/1.0.0..HEAD
+[1.0.0]: https://github.com/liamjpeters/TeamCityLog/compare/0.1.0..1.0.0
 [0.1.0]: https://github.com/liamjpeters/TeamCityLog/tree/0.1.0
